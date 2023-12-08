@@ -8,5 +8,5 @@
 
 ## Stack
 
-- (Go) [https://go.dev/]
-- (Gorm) [https://gorm.io/index.html]
+- [Go](https://go.dev/)
+- [Gorm](https://gorm.io/index.html)
