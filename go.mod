@@ -8,6 +8,7 @@ require (
 	github.com/githubnemo/CompileDaemon v1.4.0 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/jinzhu/now v1.1.5 // indirect
+	github.com/magefile/mage v1.15.0 // indirect
 	github.com/mattn/go-colorable v0.1.4 // indirect
 	github.com/mattn/go-isatty v0.0.11 // indirect
 	github.com/radovskyb/watcher v1.0.7 // indirect
