@@ -1,5 +1,10 @@
 # island-web-dev-site
 
+## Todo:
+
+- [ ] Connect to Postgres db.
+- [ ] https://www.youtube.com/watch?v=pbcTa-a3LBw stopped @ 10:00
+
 ## Tools
 
 ### Mage (MageFiles)
