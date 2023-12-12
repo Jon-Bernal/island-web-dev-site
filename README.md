@@ -1,28 +1,38 @@
 # island-web-dev-site
 
-## Todo:
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
-- [ ] Connect to Postgres db.
-- [ ] https://www.youtube.com/watch?v=pbcTa-a3LBw stopped @ 10:00
+## Creating a project
 
-## Tools
+If you're seeing this, you've probably already done this step. Congrats!
 
-### Mage (MageFiles)
+```bash
+# create a new project in the current directory
+npm create svelte@latest
 
-Description: Similar to makefiles, however it allows for more flexability than makefiles.
+# create a new project in my-app
+npm create svelte@latest my-app
+```
 
-[Install instructions](https://magefile.org/)
+## Developing
 
-### CompileDaemon
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-Description: Similar to nodemon if you've worked with nodejs. Basically this watches files within the project and recompiles whenever any changes are made to those files. A script to run the dev setup will be provided in the mage file (once I've made the mage file)
+```bash
+npm run dev
 
-<!-- Todo: remove this once mage file is created -->
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
 
-[CompileDeamon](https://github.com/githubnemo/CompileDaemon)
+## Building
 
-## Stack
+To create a production version of your app:
 
-- [Go](https://go.dev/)
-- [Gorm](https://gorm.io/index.html)
-- [GoFiber](https://gofiber.io/)
+```bash
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
