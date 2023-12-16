@@ -5,12 +5,19 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import ErrorPage from "./Components/errorPage/ErrorPage";
 import { BrowserRouter } from "react-router-dom";
+import { createTheme, MantineProvider } from "@mantine/core";
+
+const theme = createTheme({
+  /** Put your mantine theme override here */
+});
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     {/* <RouterProvider router={router} /> */}
     <BrowserRouter>
-      <App />
+      <MantineProvider theme={theme}>
+        <App />
+      </MantineProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
