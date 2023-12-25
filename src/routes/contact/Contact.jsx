@@ -45,7 +45,7 @@ export default function Contact() {
           withAsterisk
           {...form.getInputProps("message")}
           placeholder="Input placeholder"
-          autosize
+          autodsize
           minRows={3}
         />
         <Group justify="flex-end" mt="md">
