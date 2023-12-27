@@ -1,4 +1,4 @@
-import { Badge, NavLink } from "@mantine/core";
+import { NavLink } from "@mantine/core";
 import {
   IconHome2,
   IconUser,

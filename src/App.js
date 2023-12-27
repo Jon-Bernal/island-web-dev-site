@@ -1,10 +1,9 @@
 import Nav from "./Components/nav/Nav";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from "./routes/home/Home";
 import About from "./routes/about/About";
 import Portfolio from "./routes/portfolio/Portfolio";
 import Contact from "./routes/contact/Contact";
-import Footer from "./Components/footer/Footer";
 
 // Maintine Setup
 // core styles are required for all packages
@@ -33,9 +32,6 @@ function App() {
           <Route path="/contact" Component={Contact} />
         </Routes>
       </AppShell.Main>
-      <AppShell.Footer>
-        <Footer />
-      </AppShell.Footer>
     </AppShell>
   );
 }
