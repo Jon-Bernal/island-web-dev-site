@@ -4,6 +4,7 @@ import Home from "./routes/home/Home";
 import About from "./routes/about/About";
 import Portfolio from "./routes/portfolio/Portfolio";
 import Contact from "./routes/contact/Contact";
+import logo from "../src/logo.png";
 
 // Maintine Setup
 // core styles are required for all packages
@@ -20,8 +21,11 @@ import { AppShell } from "@mantine/core";
 function App() {
   return (
     <AppShell>
-      {/* <AppShell.Header></AppShell.Header> */}
+      {/* <AppShell.Header>
+      </AppShell.Header> */}
       <AppShell.Navbar>
+        <img src={logo} height="128px" width="128px" alt="logo" />
+
         <Nav />
       </AppShell.Navbar>
       <AppShell.Main>
