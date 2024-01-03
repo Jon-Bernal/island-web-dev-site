@@ -4,7 +4,8 @@ import Home from "./routes/home/Home";
 import About from "./routes/about/About";
 import Portfolio from "./routes/portfolio/Portfolio";
 import Contact from "./routes/contact/Contact";
-import logo from "./assets/logo.svg";
+import Logo from "./assets/logo.jsx";
+import styles from "./App.module.css";
 
 // Maintine Setup
 // core styles are required for all packages
@@ -34,7 +35,10 @@ function App() {
     >
       <AppShell.Header>
         <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
-        <img src={logo} />
+        <div className={styles.logo}>
+          <Logo isLightStyle={true} />
+          <h1>Whidbey Island Web Development</h1>
+        </div>
       </AppShell.Header>
 
       <AppShell.Navbar p="md">
