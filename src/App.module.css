@@ -2,7 +2,11 @@
   display: flex;
   height: 60px;
   padding: 10px;
-  justify-items: center;
+  padding-left: 28px;
+  align-items: center;
+}
+.logo > svg {
+  max-height: 25px;
 }
 
 .logo > h1 {

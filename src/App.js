@@ -27,7 +27,7 @@ function App() {
     <AppShell
       header={{ height: 60 }}
       navbar={{
-        width: 300,
+        width: 165,
         breakpoint: "sm",
         collapsed: { mobile: !opened },
       }}
@@ -54,20 +54,6 @@ function App() {
         </Routes>
       </AppShell.Main>
     </AppShell>
-
-    // <AppShell navbar={{ breakpoint: "sm", collapsed: { mobile: !opened } }}>
-    //   {/* Mobile size */}
-    //   <AppShell.Header>
-    //     <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
-    //     <div>Logo</div>
-    //   </AppShell.Header>
-    //   {/* Tablet and larger */}
-    //   <AppShell.Navbar>
-
-    //   </AppShell.Navbar>
-    //   <AppShell.Main>
-    //   </AppShell.Main>
-    // </AppShell>
   );
 }
 
