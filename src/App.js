@@ -4,12 +4,13 @@ import Home from "./routes/home/Home";
 import About from "./routes/about/About";
 import Portfolio from "./routes/portfolio/Portfolio";
 import Contact from "./routes/contact/Contact";
-import logo from "../src/logo.png";
+import logo from "./assets/logo.svg";
 
 // Maintine Setup
 // core styles are required for all packages
 import "@mantine/core/styles.css";
-import { AppShell } from "@mantine/core";
+import { AppShell, Burger } from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
 
 // other css files are required only if
 // you are using components from the corresponding package
@@ -19,15 +20,27 @@ import { AppShell } from "@mantine/core";
 // ...
 
 function App() {
-  return (
-    <AppShell>
-      {/* <AppShell.Header>
-      </AppShell.Header> */}
-      <AppShell.Navbar>
-        <img src={logo} height="128px" width="128px" alt="logo" />
+  const [opened, { toggle }] = useDisclosure();
 
+  return (
+    <AppShell
+      header={{ height: 60 }}
+      navbar={{
+        width: 300,
+        breakpoint: "sm",
+        collapsed: { mobile: !opened },
+      }}
+      padding="md"
+    >
+      <AppShell.Header>
+        <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
+        <img src={logo} />
+      </AppShell.Header>
+
+      <AppShell.Navbar p="md">
         <Nav />
       </AppShell.Navbar>
+
       <AppShell.Main>
         <Routes>
           <Route path="/" Component={Home} />
@@ -37,6 +50,20 @@ function App() {
         </Routes>
       </AppShell.Main>
     </AppShell>
+
+    // <AppShell navbar={{ breakpoint: "sm", collapsed: { mobile: !opened } }}>
+    //   {/* Mobile size */}
+    //   <AppShell.Header>
+    //     <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
+    //     <div>Logo</div>
+    //   </AppShell.Header>
+    //   {/* Tablet and larger */}
+    //   <AppShell.Navbar>
+
+    //   </AppShell.Navbar>
+    //   <AppShell.Main>
+    //   </AppShell.Main>
+    // </AppShell>
   );
 }
 
