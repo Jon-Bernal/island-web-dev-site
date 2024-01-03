@@ -33,11 +33,11 @@ function App() {
       }}
       padding="md"
     >
-      <AppShell.Header>
+      <AppShell.Header className={styles.mobileFix}>
         <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
         <div className={styles.logo}>
           <Logo isLightStyle={true} />
-          <h1>Whidbey Island Web Development</h1>
+          <h1>Whidbey Web Development</h1>
         </div>
       </AppShell.Header>
 

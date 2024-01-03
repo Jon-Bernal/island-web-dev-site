@@ -5,6 +5,20 @@
   padding-left: 28px;
   align-items: center;
 }
+
+@media (max-width: 767px) {
+  .mobileFix {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+  }
+  .logo {
+    width: inherit;
+    /* display: none; */
+  }
+}
+
 .logo > svg {
   max-height: 25px;
 }
@@ -14,4 +28,10 @@
   padding: 0;
   margin: 0;
   margin-left: 10px;
+}
+
+@media (max-width: 400px) {
+  .logo > h1 {
+    display: none;
+  }
 }
