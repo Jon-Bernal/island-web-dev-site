@@ -1,34 +1,39 @@
+import pluaris from "../../assets/pluaris.png";
+import guild from "../../assets/guild-1.png";
+import lambda from "../../assets/lambda-group-organizer.jpg";
+import portfolio from "../../assets/portfolio-1.png";
+
 export const sites = [
   {
     images: [
       {
-        src: "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png",
-        alt: "Norway",
+        src: pluaris,
+        alt: "Nowigence dashboard with a lot of data displayed",
       },
     ],
-    title: "Norway Fjord Adventures",
+    title: "Nowigence",
     description:
       "With Fjord Tours you can explore more of the magical fjord landscapes with tours and activities on and around the fjords of Norway",
   },
   {
     images: [
       {
-        src: "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png",
-        alt: "Norway",
+        src: guild,
+        alt: "Guild Education Home Page",
       },
     ],
-    title: "Norway Fjord Adventures",
+    title: "Guild Education",
     description:
       "With Fjord Tours you can explore more of the magical fjord landscapes with tours and activities on and around the fjords of Norway",
   },
   {
     images: [
       {
-        src: "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png",
-        alt: "Norway",
+        src: lambda,
+        alt: "Lambda Group Organizer Home Page",
       },
     ],
-    title: "Norway Fjord Adventures",
+    title: "Lambda Group Organizer",
     description:
       "With Fjord Tours you can explore more of the magical fjord landscapes with tours and activities on and around the fjords of Norway",
   },
