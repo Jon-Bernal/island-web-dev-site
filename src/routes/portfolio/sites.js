@@ -25,8 +25,7 @@ export const sites = [
     ],
     title: "Guild Education",
     shortDescription: ``,
-    description:
-      "With Fjord Tours you can explore more of the magical fjord landscapes with tours and activities on and around the fjords of Norway",
+    description: `I built mainly backend services at guild`,
   },
   {
     images: [
