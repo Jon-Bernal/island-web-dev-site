@@ -20,7 +20,7 @@ export default function Portfolio() {
             </Group>
 
             <Text size="sm" c="dimmed">
-              {site.description}
+              {site.shortDescription}
             </Text>
 
             <Button color="blue" mt="md" radius="md">
