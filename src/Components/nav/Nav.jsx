@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { NavLink } from "@mantine/core";
 import {
   IconHome2,
@@ -29,7 +30,11 @@ export const navLinks = {
 export default function Nav() {
   return (
     <nav className={styles.nav}>
-      <NavLink
+      <Link to="/">Home</Link>
+      <Link to="/about">About</Link>
+      <Link to="/portfolio">Portfolio</Link>
+      <Link to="/contact">Contact</Link>
+      {/* <NavLink
         href={navLinks.home.url}
         label={navLinks.home.text}
         leftSection={<IconHome2 size="1rem" stroke={1.5} />}
@@ -48,7 +53,7 @@ export default function Nav() {
         href={navLinks.contact.url}
         label={navLinks.contact.text}
         leftSection={<IconMail size="1rem" stroke={1.5} />}
-      />
+      /> */}
     </nav>
   );
 }
