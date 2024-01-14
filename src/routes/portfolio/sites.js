@@ -25,7 +25,7 @@ export const sites = [
     ],
     title: "Guild Education",
     shortDescription: ``,
-    description: `I built mainly backend services at guild`,
+    description: `I built mainly backend services at guild.`,
   },
   {
     images: [
