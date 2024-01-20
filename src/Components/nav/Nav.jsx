@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { NavLink } from "@mantine/core";
 import {
   IconHome2,
   IconUser,
@@ -30,30 +29,22 @@ export const navLinks = {
 export default function Nav() {
   return (
     <nav className={styles.nav}>
-      <Link to="/">Home</Link>
-      <Link to="/about">About</Link>
-      <Link to="/portfolio">Portfolio</Link>
-      <Link to="/contact">Contact</Link>
-      {/* <NavLink
-        href={navLinks.home.url}
-        label={navLinks.home.text}
-        leftSection={<IconHome2 size="1rem" stroke={1.5} />}
-      />
-      <NavLink
-        href={navLinks.about.url}
-        label={navLinks.about.text}
-        leftSection={<IconUser size="1rem" stroke={1.5} />}
-      />
-      <NavLink
-        href={navLinks.portfolio.url}
-        label={navLinks.portfolio.text}
-        leftSection={<IconLayoutGrid size="1rem" stroke={1.5} />}
-      />
-      <NavLink
-        href={navLinks.contact.url}
-        label={navLinks.contact.text}
-        leftSection={<IconMail size="1rem" stroke={1.5} />}
-      /> */}
+      <Link to="/" className={styles.link_row}>
+        <IconHome2 size="1rem" stroke={1.5} className={styles.nav_icon} />
+        <span className={styles.nav_text}>Home</span>
+      </Link>
+      <Link to="/about" className={styles.link_row}>
+        <IconUser size="1rem" stroke={1.5} className={styles.nav_icon} />
+        <span className={styles.nav_text}>About</span>
+      </Link>
+      <Link to="/portfolio" className={styles.link_row}>
+        <IconLayoutGrid size="1rem" stroke={1.5} className={styles.nav_icon} />
+        <span className={styles.nav_text}>Portfolio</span>
+      </Link>
+      <Link to="/contact" className={styles.link_row}>
+        <IconMail size="1rem" stroke={1.5} className={styles.nav_icon} />
+        <span className={styles.nav_text}>Contact</span>
+      </Link>
     </nav>
   );
 }
