@@ -10,8 +10,9 @@ import styles from "./App.module.css";
 // Maintine Setup
 // core styles are required for all packages
 import "@mantine/core/styles.css";
-import { AppShell, Burger } from "@mantine/core";
+import { AppShell, Burger, useMantineColorScheme } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
+import { useEffect } from "react";
 
 // other css files are required only if
 // you are using components from the corresponding package
@@ -22,6 +23,12 @@ import { useDisclosure } from "@mantine/hooks";
 
 function App() {
   const [opened, { toggle }] = useDisclosure();
+
+  const { setColorScheme, clearColorScheme } = useMantineColorScheme();
+
+  useEffect(() => {
+    setColorScheme("dark");
+  }, []);
 
   return (
     <AppShell
@@ -41,7 +48,7 @@ function App() {
         </div>
       </AppShell.Header>
 
-      <AppShell.Navbar p="md">
+      <AppShell.Navbar>
         <Nav />
       </AppShell.Navbar>
 

@@ -9,11 +9,13 @@ import { createTheme, MantineProvider } from "@mantine/core";
 
 const theme = createTheme({
   /** Put your mantine theme override here */
-  primaryColor: ,
+  primaryColor: "orange",
+
   colors: {
-    'orange': ["#ff6d04"],
-    'blue': ["#0488ff"]
-  }
+    orange: ["#ff6d04"],
+    blue: ["#0488ff"],
+  },
+  colorScheme: "dark",
 });
 
 ReactDOM.createRoot(document.getElementById("root")).render(

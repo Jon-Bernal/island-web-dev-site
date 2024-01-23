@@ -1,34 +1,32 @@
 .nav {
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
   width: 100%;
-  padding: 0px !important;
-  margin: 0 !important;
 }
 
 .link_row {
   display: flex;
   align-items: center;
-  /* border: 1px solid red; */
-  margin-bottom: 1.5rem;
   text-decoration: none;
   overflow: hidden;
   width: 100%;
   flex-grow: 2;
-  padding: 10px 0;
+  padding: 10px 0px 10px 30px;
+  color: white;
 }
 .link_row:hover {
-  background: orangered;
+  background: #ff6d0433;
 }
+.link_row[data-activeLink="active"] {
+  background: #ff6d04;
+}
+
 .nav_icon {
-  /* border: 1px solid red; */
   height: 1.1rem;
   width: 1.1rem;
 }
 
 .nav_text {
-  /* border: 1px solid red; */
   line-height: 1rem;
   padding: 0;
   margin-bottom: -8px;
