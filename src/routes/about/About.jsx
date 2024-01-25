@@ -1,15 +1,24 @@
+import { Image } from "@mantine/core";
+import headshot from "../../assets/headshot.png";
+import styles from "./about.module.css";
+
 export default function About() {
   return (
-    <div>
-      <h2>About Jon Bernal</h2>
+    <div className={styles.container}>
+      <div className={styles.pic}>
+        <Image radius="md" src={headshot} />
+      </div>
+      <h2>About Whidbey Web Dev</h2>
       <p>
-        Welcome! I'm Jon Bernal, a seasoned freelance web developer with a
-        passion for crafting digital experiences that blend functionality and
-        creativity. With a rich background in software engineering, I've honed
-        my skills through impactful roles, including a senior software engineer
-        position at Guild Education and valuable contributions to the dynamic
-        world of startups like Nowigence.
+        Welcome! Whidbey Web Dev is really a one person show. I'm Jon Bernal, a
+        seasoned freelance web developer with a passion for crafting digital
+        experiences that blend functionality and creativity. With a rich
+        background in software engineering, I've honed my skills through
+        impactful roles, including a senior software engineer position at Guild
+        Education and valuable contributions to the dynamic world of startups
+        like Nowigence.
       </p>
+      <p></p>
 
       <h3>Tech Maestro</h3>
       <p>

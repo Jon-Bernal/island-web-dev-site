@@ -1,0 +1,19 @@
+.container {
+  max-width: 650px;
+  box-shadow: 2px 2px 4px #555;
+  border-radius: 6px;
+  border: 1px solid darkgray;
+  padding: 20px;
+  margin: 20px auto;
+}
+
+.pic {
+  height: 200px;
+  width: 200px;
+  background-color: var(--primary-color);
+  border-radius: 6%;
+  overflow: hidden;
+  border: 6px solid white;
+  float: left;
+  margin: 20px;
+}
