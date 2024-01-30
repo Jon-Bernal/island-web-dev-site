@@ -1,9 +1,36 @@
+.layout {
+  display: grid;
+  grid-template-columns: 175px auto;
+  grid-template-rows: auto calc(100vh - 80px);
+  grid-template-areas: "header header" "nav main";
+  background: var(--background-primary);
+  position: relative;
+}
+.header {
+  grid-area: header;
+  background: var(--background-header);
+  z-index: 100;
+}
+.nav {
+  grid-area: nav;
+  background: var(--background-nav);
+  border-right: 1px solid var(--text-color);
+  z-index: 50;
+}
+.main {
+  grid-area: main;
+}
+
 .logo {
   display: flex;
   height: 60px;
   padding: 10px;
   padding-left: 28px;
   align-items: center;
+  box-shadow: -3px 1px 3px black;
+}
+.logo_text {
+  color: var(--text-color);
 }
 
 @media (max-width: 767px) {

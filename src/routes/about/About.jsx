@@ -1,4 +1,3 @@
-import { Image } from "@mantine/core";
 import headshot from "../../assets/headshot.png";
 import styles from "./about.module.css";
 
@@ -6,7 +5,7 @@ export default function About() {
   return (
     <div className={styles.container}>
       <div className={styles.pic}>
-        <Image radius="md" src={headshot} />
+        <img src={headshot} alt="Pencil sketch of Jon Bernal" />
       </div>
       <h2>About Whidbey Web Dev</h2>
       <p>

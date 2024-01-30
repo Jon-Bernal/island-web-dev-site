@@ -1,34 +1,45 @@
-import { Card, Image, Group, Text, Button, Grid } from "@mantine/core";
 import { sites } from "./sites";
-
+import { Card, CardHeader, CardBody, Image } from "grommet";
+import styles from "./portfolio.module.css";
 export default function Portfolio() {
   return (
-    <Grid>
+    <div className={styles.container}>
       {sites.map((site) => (
-        <Grid.Col span={{ base: 12, xs: 6, sm: 6, md: 4, lg: 3, xl: 2 }}>
-          <Card shadow="sm" padding="lg" radius="md" withBorder>
-            <Card.Section>
-              <Image
-                src={site.images[0].src}
-                height={160}
-                alt={site.images[0].alt}
-              />
-            </Card.Section>
+        <Card
+          height="medium"
+          width="medium"
+          background="dark-2"
+          className={styles.card}
+        >
+          <CardHeader pad="none" style={{ border: "1px solid red" }}>
+            <Image src={site.images[0].src} fit="cover" />
+          </CardHeader>
+          <CardBody pad="small">Body</CardBody>
+        </Card>
+        //     <Grid.Col span={{ base: 12, xs: 6, sm: 6, md: 4, lg: 3, xl: 2 }}>
+        //       <Card shadow="sm" padding="lg" radius="md" withBorder>
+        //         <Card.Section>
+        //           <Image
+        //             src={site.images[0].src}
+        //             height={160}
+        //             alt={site.images[0].alt}
+        //           />
+        //         </Card.Section>
 
-            <Group justify="space-between" mt="md" mb="xs">
-              <Text fw={500}>{site.title}</Text>
-            </Group>
+        //         <Group justify="space-between" mt="md" mb="xs">
+        //           <Text fw={500}>{site.title}</Text>
+        //         </Group>
 
-            <Text size="sm" c="dimmed">
-              {site.shortDescription}
-            </Text>
+        //         <Text size="sm" c="dimmed">
+        //           {site.shortDescription}
+        //         </Text>
 
-            <Button color="blue" mt="md" radius="md">
-              View
-            </Button>
-          </Card>
-        </Grid.Col>
+        //         <Button color="blue" mt="md" radius="md">
+        //           View
+        //         </Button>
+        //       </Card>
+        //     </Grid.Col>
       ))}
-    </Grid>
+    </div>
   );
 }

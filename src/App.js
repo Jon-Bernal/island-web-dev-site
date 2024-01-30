@@ -6,61 +6,48 @@ import Portfolio from "./routes/portfolio/Portfolio";
 import Contact from "./routes/contact/Contact";
 import Logo from "./assets/logo.jsx";
 import styles from "./App.module.css";
+import { Grommet, Box } from "grommet";
 
-// Maintine Setup
-// core styles are required for all packages
-import "@mantine/core/styles.css";
-import { AppShell, Burger, useMantineColorScheme } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
-import { useEffect } from "react";
-
-// other css files are required only if
-// you are using components from the corresponding package
-// import '@mantine/dates/styles.css';
-// import '@mantine/dropzone/styles.css';
-// import '@mantine/code-highlight/styles.css';
-// ...
+const theme = {
+  global: {
+    font: {
+      family: "Roboto",
+      size: "18px",
+      height: "20px",
+      color: "white",
+    },
+    colors: {
+      primary: "#ff6d04",
+      secondary: "#0488ff",
+    },
+  },
+};
 
 function App() {
-  const [opened, { toggle }] = useDisclosure();
-
-  const { setColorScheme, clearColorScheme } = useMantineColorScheme();
-
-  useEffect(() => {
-    setColorScheme("dark");
-  }, []);
-
   return (
-    <AppShell
-      header={{ height: 60 }}
-      navbar={{
-        width: 165,
-        breakpoint: "sm",
-        collapsed: { mobile: !opened },
-      }}
-      padding="md"
-    >
-      <AppShell.Header className={styles.mobileFix}>
-        <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
-        <div className={styles.logo}>
-          <Logo isLightStyle={true} />
-          <h1>Whidbey Web Development</h1>
+    <Grommet theme={theme} full>
+      <div className={styles.layout}>
+        <div className={styles.header}>
+          <div className={styles.logo}>
+            <Logo isLightStyle={true} />
+            <h1 className={styles.logo_text}>Whidbey Web Development</h1>
+          </div>
         </div>
-      </AppShell.Header>
 
-      <AppShell.Navbar>
-        <Nav />
-      </AppShell.Navbar>
+        <div className={styles.nav}>
+          <Nav />
+        </div>
 
-      <AppShell.Main>
-        <Routes>
-          <Route path="/" Component={Home} />
-          <Route path="/about" Component={About} />
-          <Route path="/portfolio" Component={Portfolio} />
-          <Route path="/contact" Component={Contact} />
-        </Routes>
-      </AppShell.Main>
-    </AppShell>
+        <div className={styles.main}>
+          <Routes>
+            <Route path="/" Component={Home} />
+            <Route path="/about" Component={About} />
+            <Route path="/portfolio" Component={Portfolio} />
+            <Route path="/contact" Component={Contact} />
+          </Routes>
+        </div>
+      </div>
+    </Grommet>
   );
 }
 
