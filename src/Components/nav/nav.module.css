@@ -15,7 +15,7 @@
 .link_row:hover {
   background: #ff6d0433;
 }
-.link_row[data-activeLink="active"] {
+.link_row[data-activelink="active"] {
   background: #ff6d04;
 }
 

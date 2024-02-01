@@ -34,7 +34,7 @@ export default function Nav() {
       <Link
         to="/"
         className={styles.link_row}
-        data-activeLink={pathname === "/" ? "active" : "not active"}
+        data-activelink={pathname === "/" ? "active" : "not active"}
       >
         <IconHome2 size="1rem" stroke={1.5} className={styles.nav_icon} />
         <span className={styles.nav_text}>Home</span>
@@ -42,7 +42,7 @@ export default function Nav() {
       <Link
         to="/about"
         className={styles.link_row}
-        data-activeLink={pathname === "/about" ? "active" : "not active"}
+        data-activelink={pathname === "/about" ? "active" : "not active"}
       >
         <IconUser size="1rem" stroke={1.5} className={styles.nav_icon} />
         <span className={styles.nav_text}>About</span>
@@ -50,7 +50,7 @@ export default function Nav() {
       <Link
         to="/portfolio"
         className={styles.link_row}
-        data-activeLink={pathname === "/portfolio" ? "active" : "not active"}
+        data-activelink={pathname === "/portfolio" ? "active" : "not active"}
       >
         <IconLayoutGrid size="1rem" stroke={1.5} className={styles.nav_icon} />
         <span className={styles.nav_text}>Portfolio</span>
@@ -58,7 +58,7 @@ export default function Nav() {
       <Link
         to="/contact"
         className={styles.link_row}
-        data-activeLink={pathname === "/contact" ? "active" : "not active"}
+        data-activelink={pathname === "/contact" ? "active" : "not active"}
       >
         <IconMail size="1rem" stroke={1.5} className={styles.nav_icon} />
         <span className={styles.nav_text}>Contact</span>

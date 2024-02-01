@@ -1,4 +1,4 @@
-import Nav from "./Components/nav/Nav";
+import Nav from "./Components/nav/Nav.jsx";
 import { Route, Routes } from "react-router-dom";
 import Home from "./routes/home/Home";
 import About from "./routes/about/About";
@@ -6,7 +6,8 @@ import Portfolio from "./routes/portfolio/Portfolio";
 import Contact from "./routes/contact/Contact";
 import Logo from "./assets/logo.jsx";
 import styles from "./App.module.css";
-import { Grommet, Box } from "grommet";
+import { Grommet } from "grommet";
+import { useReducer, useEffect } from "react";
 
 const theme = {
   global: {
@@ -23,7 +24,49 @@ const theme = {
   },
 };
 
+const actions = {
+  opening: "OPENING",
+  opened: "OPENED",
+  closing: "CLOSING",
+  closed: "CLOSED",
+};
+
+const navReducer = (state, navAction) => {
+  console.log("state: ", state);
+  console.log("navAction: ", navAction);
+  switch (navAction.type) {
+    case actions.opening:
+      return { ...state, nav: actions.opening };
+    case actions.opened:
+      return { ...state, nav: actions.opened };
+    case actions.closing:
+      return { ...state, nav: actions.closing };
+    case actions.closed:
+      return { ...state, nav: actions.closed };
+    default:
+      return state;
+  }
+};
+
+const initstate = {
+  nav: actions.closed,
+};
+
 function App() {
+  const [state, navDispatcher] = useReducer(navReducer, initstate);
+
+  useEffect(() => {
+    if (state.nav === actions.closing) {
+      setTimeout(() => {
+        navDispatcher({ type: actions.closed });
+      }, 1000);
+    } else if (state.nav === actions.opening) {
+      setTimeout(() => {
+        navDispatcher({ type: actions.opened });
+      }, 1000);
+    }
+  }, [state]);
+
   return (
     <Grommet theme={theme} full>
       <div className={styles.layout}>
@@ -32,9 +75,22 @@ function App() {
             <Logo isLightStyle={true} />
             <h1 className={styles.logo_text}>Whidbey Web Development</h1>
           </div>
+          <button
+            onClick={() => {
+              console.log("clicked :>> ");
+              if (state.nav === actions.closed) {
+                navDispatcher({ type: actions.opening });
+              } else if (state.nav === actions.opened) {
+                navDispatcher({ type: actions.closing });
+              }
+            }}
+            className={styles.mobile_nav}
+          >
+            {state.nav}
+          </button>
         </div>
 
-        <div className={styles.nav}>
+        <div className={styles.desktop_nav}>
           <Nav />
         </div>
 
@@ -46,6 +102,9 @@ function App() {
             <Route path="/contact" Component={Contact} />
           </Routes>
         </div>
+      </div>
+      <div className={styles.mobile_nav}>
+        <Nav />
       </div>
     </Grommet>
   );
