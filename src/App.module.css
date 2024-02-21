@@ -26,15 +26,16 @@
   border-right: 1px solid var(--text-color);
   z-index: 50;
 }
-/* .mobile_nav {
+.mobile_nav {
   display: none;
-} */
+}
 
 /* Mobile Nav styles */
 @media (max-width: 720px) {
-  /* .mobile_nav {
-    display: block;
-  } */
+  .mobile_nav {
+    display: initial;
+    margin-left: auto;
+  }
 
   .desktop_nav {
     display: none;

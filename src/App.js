@@ -7,7 +7,8 @@ import Contact from "./routes/contact/Contact";
 import Logo from "./assets/logo.jsx";
 import styles from "./App.module.css";
 import { Grommet } from "grommet";
-import { useReducer, useEffect } from "react";
+import { useReducer, useEffect, useState } from "react";
+import MenuButton from "./Components/menuButton/MenuButton.jsx";
 
 const theme = {
   global: {
@@ -31,41 +32,43 @@ const actions = {
   closed: "CLOSED",
 };
 
-const navReducer = (state, navAction) => {
-  console.log("state: ", state);
-  console.log("navAction: ", navAction);
-  switch (navAction.type) {
-    case actions.opening:
-      return { ...state, nav: actions.opening };
-    case actions.opened:
-      return { ...state, nav: actions.opened };
-    case actions.closing:
-      return { ...state, nav: actions.closing };
-    case actions.closed:
-      return { ...state, nav: actions.closed };
-    default:
-      return state;
-  }
-};
+// const navReducer = (state, navAction) => {
+//   console.log("state: ", state);
+//   console.log("navAction: ", navAction);
+//   switch (navAction.type) {
+//     case actions.opening:
+//       return { ...state, nav: actions.opening };
+//     case actions.opened:
+//       return { ...state, nav: actions.opened };
+//     case actions.closing:
+//       return { ...state, nav: actions.closing };
+//     case actions.closed:
+//       return { ...state, nav: actions.closed };
+//     default:
+//       return state;
+//   }
+// };
 
-const initstate = {
-  nav: actions.closed,
-};
+// const initstate = {
+//   nav: actions.closed,
+// };
 
 function App() {
-  const [state, navDispatcher] = useReducer(navReducer, initstate);
+  // const [state, navDispatcher] = useReducer(navReducer, initstate);
 
-  useEffect(() => {
-    if (state.nav === actions.closing) {
-      setTimeout(() => {
-        navDispatcher({ type: actions.closed });
-      }, 1000);
-    } else if (state.nav === actions.opening) {
-      setTimeout(() => {
-        navDispatcher({ type: actions.opened });
-      }, 1000);
-    }
-  }, [state]);
+  // useEffect(() => {
+  //   if (state.nav === actions.closing) {
+  //     setTimeout(() => {
+  //       navDispatcher({ type: actions.closed });
+  //     }, 1000);
+  //   } else if (state.nav === actions.opening) {
+  //     setTimeout(() => {
+  //       navDispatcher({ type: actions.opened });
+  //     }, 1000);
+  //   }
+  // }, [state]);
+
+  const [navOpen, setNavOpen] = useState(false);
 
   return (
     <Grommet theme={theme} full>
@@ -74,20 +77,24 @@ function App() {
           <div className={styles.logo}>
             <Logo isLightStyle={true} />
             <h1 className={styles.logo_text}>Whidbey Web Development</h1>
+            <MenuButton
+              onClick={() => setNavOpen(!navOpen)}
+              checked={navOpen}
+            />
+            {/* <button
+              onClick={() => {
+                console.log("clicked :>> ");
+                if (state.nav === actions.closed) {
+                  navDispatcher({ type: actions.opening });
+                } else if (state.nav === actions.opened) {
+                  navDispatcher({ type: actions.closing });
+                }
+              }}
+              className={styles.mobile_nav}
+            >
+              {state.nav}
+            </button> */}
           </div>
-          <button
-            onClick={() => {
-              console.log("clicked :>> ");
-              if (state.nav === actions.closed) {
-                navDispatcher({ type: actions.opening });
-              } else if (state.nav === actions.opened) {
-                navDispatcher({ type: actions.closing });
-              }
-            }}
-            className={styles.mobile_nav}
-          >
-            {state.nav}
-          </button>
         </div>
 
         <div className={styles.desktop_nav}>
