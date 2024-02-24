@@ -16,4 +16,17 @@
   border: 6px solid white;
   float: left;
   margin: 20px;
+  @media (max-width: 650px) {
+    height: 200px;
+    width: 200px;
+    float: none;
+    margin: auto;
+  }
+}
+
+.pic > img {
+  height: 100%;
+  width: 100%;
+  @media (max-width: 650px) {
+  }
 }
