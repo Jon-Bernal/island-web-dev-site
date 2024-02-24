@@ -26,7 +26,7 @@ export const navLinks = {
   },
 };
 
-export default function Nav() {
+export default function Nav({ click }) {
   const location = useLocation();
   const { pathname } = location;
   return (
@@ -35,6 +35,7 @@ export default function Nav() {
         to="/"
         className={styles.link_row}
         data-activelink={pathname === "/" ? "active" : "not active"}
+        onClick={click}
       >
         <IconHome2 size="1rem" stroke={1.5} className={styles.nav_icon} />
         <span className={styles.nav_text}>Home</span>
@@ -43,6 +44,7 @@ export default function Nav() {
         to="/about"
         className={styles.link_row}
         data-activelink={pathname === "/about" ? "active" : "not active"}
+        onClick={click}
       >
         <IconUser size="1rem" stroke={1.5} className={styles.nav_icon} />
         <span className={styles.nav_text}>About</span>
@@ -51,6 +53,7 @@ export default function Nav() {
         to="/portfolio"
         className={styles.link_row}
         data-activelink={pathname === "/portfolio" ? "active" : "not active"}
+        onClick={click}
       >
         <IconLayoutGrid size="1rem" stroke={1.5} className={styles.nav_icon} />
         <span className={styles.nav_text}>Portfolio</span>
@@ -59,6 +62,7 @@ export default function Nav() {
         to="/contact"
         className={styles.link_row}
         data-activelink={pathname === "/contact" ? "active" : "not active"}
+        onClick={click}
       >
         <IconMail size="1rem" stroke={1.5} className={styles.nav_icon} />
         <span className={styles.nav_text}>Contact</span>

@@ -1,14 +1,17 @@
 .menu {
-  --front: #275efe;
-  --back: #d93757;
+  --front: var(--secondary-color);
+  --back: var(--primary-color);
   --icon: white;
   perspective: 600px;
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   position: relative;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   margin-left: auto;
+  @media (min-width: 721px) {
+    display: none;
+  }
   input {
     display: none;
     & + div {

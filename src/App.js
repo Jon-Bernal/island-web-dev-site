@@ -25,12 +25,12 @@ const theme = {
   },
 };
 
-const actions = {
-  opening: "OPENING",
-  opened: "OPENED",
-  closing: "CLOSING",
-  closed: "CLOSED",
-};
+// const actions = {
+//   opening: "OPENING",
+//   opened: "OPENED",
+//   closing: "CLOSING",
+//   closed: "CLOSED",
+// };
 
 // const navReducer = (state, navAction) => {
 //   console.log("state: ", state);
@@ -79,26 +79,16 @@ function App() {
             <h1 className={styles.logo_text}>Whidbey Web Development</h1>
             <MenuButton
               onClick={() => setNavOpen(!navOpen)}
-              checked={navOpen}
+              navOpen={navOpen}
             />
-            {/* <button
-              onClick={() => {
-                console.log("clicked :>> ");
-                if (state.nav === actions.closed) {
-                  navDispatcher({ type: actions.opening });
-                } else if (state.nav === actions.opened) {
-                  navDispatcher({ type: actions.closing });
-                }
-              }}
-              className={styles.mobile_nav}
-            >
-              {state.nav}
-            </button> */}
           </div>
         </div>
 
         <div className={styles.desktop_nav}>
-          <Nav />
+          <Nav click={() => setNavOpen(false)} />
+        </div>
+        <div className={styles.mobile_nav} data-navState={`${navOpen}`}>
+          {navOpen && <Nav click={() => setNavOpen(false)} />}
         </div>
 
         <div className={styles.main}>
@@ -110,9 +100,9 @@ function App() {
           </Routes>
         </div>
       </div>
-      <div className={styles.mobile_nav}>
+      {/* <div className={styles.mobile_nav}>
         <Nav />
-      </div>
+      </div> */}
     </Grommet>
   );
 }
