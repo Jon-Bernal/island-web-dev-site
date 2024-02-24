@@ -5,6 +5,7 @@
   grid-template-areas: "header header" "nav main";
   background: var(--background-primary);
   position: relative;
+  min-height: 100vh;
 }
 
 /* Mobile Nav styles */
