@@ -1,0 +1,10 @@
+.container {
+  /* display: flex; */
+  /* justify-content: space-evenly; */
+  /* flex-wrap: wrap; */
+}
+
+.card {
+  margin: 40px;
+  display: inline-block;
+}
