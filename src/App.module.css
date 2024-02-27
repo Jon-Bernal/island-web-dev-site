@@ -44,6 +44,7 @@
     right: 0;
     left: 0;
     background: var(--background-primary);
+    z-index: 1;
   }
   .mobile_nav[data-navState="false"] {
     display: none;

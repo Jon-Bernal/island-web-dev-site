@@ -12,9 +12,9 @@ export const sites = [
       },
     ],
     title: "Nowigence",
-    shortDescription: ``,
+    shortDescription: `This was the first startup I worked for. I learned a great many lessons while working with nowigence. The technology we used at the company completely metamorphasized in the two years I worked there...`,
     description:
-      "With Fjord Tours you can explore more of the magical fjord landscapes with tours and activities on and around the fjords of Norway",
+      "This was the first startup I worked for. I learned a great many lessons while working with nowigence. The technology we used at the company completely metamorphasized in the two years I worked there.",
   },
   {
     images: [

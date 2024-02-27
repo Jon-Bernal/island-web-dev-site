@@ -1,6 +1,6 @@
 import styles from "./contact.module.css";
-
 import { useState } from "react";
+
 import {
   Card,
   CardHeader,
@@ -8,7 +8,9 @@ import {
   Button,
   TextInput,
   TextArea,
+  FormField,
 } from "grommet";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   const [msg, setMsg] = useState({
@@ -22,45 +24,86 @@ export default function Contact() {
   //   return isValid;
   // }
 
+  const sendEmail = (e) => {
+    e.preventDefault();
+    // emailjs
+    //   .sendForm(
+    //     "service_d440m1m",
+    //     "service_d440m1m",
+    //     document.querySelector(".contact_form"),
+    //     "qm9_mgZliduEpYnoW"
+    //   )
+    //   .then(
+    //     (result) => {
+    //       console.log(result.text);
+    //       console.log("message sent!");
+    //     },
+    //     (error) => {
+    //       console.log(error.text);
+    //       console.log("error sending message, try again!");
+    //     }
+    //   );
+  };
+
   return (
-    <Card height="medium" width="large" background="dark-2">
-      <CardHeader pad="medium">
-        <h2>Contact Me</h2>
-      </CardHeader>
-      <CardBody pad="medium">
-        <form
-          onSubmit={(values) => console.log(values)}
-          className={styles.contact_form}
-        >
-          <TextInput
-            placeholder="John Smith"
-            value={msg.name}
-            onChange={(event) => setMsg({ ...msg, name: event.target.value })}
-          />
-          <TextInput
-            placeholder="example@provider.com"
-            value={msg.email}
-            className={styles.input}
-            onChange={(event) => setMsg({ ...msg, email: event.target.value })}
-          />
-          <TextArea
-            placeholder="Write your message here."
-            value={msg.message}
-            className={styles.input}
-            onChange={(event) =>
-              setMsg({ ...msg, message: event.target.value })
-            }
-          />
-          <Button
-            primary
-            type="submit"
-            label="Submit"
-            alignSelf="end"
-            color={"#0488ff"}
-            margin={{ top: "20px" }}
-          />
-        </form>
-      </CardBody>
-    </Card>
+    <div className={styles.center}>
+      <Card background="dark-2">
+        {/* <CardHeader pad="medium"></CardHeader> */}
+        <CardBody pad="medium">
+          <h2>Contact Me</h2>
+          <form onSubmit={sendEmail} className={styles.contact_form}>
+            <input
+              name="user_email"
+              type="email"
+              placeholder="Email"
+              required
+            />
+            <textarea
+              name="user_message"
+              placeholder="Write message..."
+              required
+            ></textarea>
+            {/* <FormField label="Name"> */}
+            {/* <TextInput
+                placeholder="John Smith"
+                value={msg.name}
+                onChange={(event) =>
+                  setMsg({ ...msg, name: event.target.value })
+                }
+              /> */}
+            {/* </FormField> */}
+            {/* <div className={styles.spacer}></div> */}
+            {/* <FormField label="Email">
+              <TextInput
+                placeholder="example@provider.com"
+                value={msg.email}
+                onChange={(event) =>
+                  setMsg({ ...msg, email: event.target.value })
+                }
+              />
+            </FormField>
+            <div className={styles.spacer}></div> */}
+            {/* <FormField label="Message">
+              <TextArea
+                placeholder="Write your message here."
+                value={msg.message}
+                className={styles.input}
+                onChange={(event) =>
+                  setMsg({ ...msg, message: event.target.value })
+                }
+              />
+            </FormField> */}
+            <Button
+              primary
+              type="submit"
+              label="Submit"
+              alignSelf="end"
+              color={"#0488ff"}
+              margin={{ top: "20px" }}
+            />
+          </form>
+        </CardBody>
+      </Card>
+    </div>
   );
 }

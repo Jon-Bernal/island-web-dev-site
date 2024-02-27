@@ -8,3 +8,11 @@
   margin: 40px;
   display: inline-block;
 }
+
+.title {
+  margin: 0;
+}
+
+.shortDesc {
+  font-size: 1rem;
+}

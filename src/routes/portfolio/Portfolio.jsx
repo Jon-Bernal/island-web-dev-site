@@ -11,10 +11,13 @@ export default function Portfolio() {
           background="dark-2"
           className={styles.card}
         >
-          <CardHeader pad="none" style={{ border: "1px solid red" }}>
+          <CardHeader pad="none">
             <Image src={site.images[0].src} fit="cover" />
           </CardHeader>
-          <CardBody pad="small">Body</CardBody>
+          <CardBody pad="small">
+            <h4 className={styles.title}>{site.title}</h4>
+            <p className={styles.shortDesc}>{site.shortDescription}</p>
+          </CardBody>
         </Card>
         //     <Grid.Col span={{ base: 12, xs: 6, sm: 6, md: 4, lg: 3, xl: 2 }}>
         //       <Card shadow="sm" padding="lg" radius="md" withBorder>
