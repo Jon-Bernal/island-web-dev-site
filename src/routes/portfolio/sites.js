@@ -1,32 +1,65 @@
 import pluaris from "../../assets/pluaris.png";
-import guild from "../../assets/guild-1.png";
+import guild1 from "../../assets/guild-1.png";
+import guild2 from "../../assets/guild-2.png";
+import guild3 from "../../assets/guild-mobile-1.png";
 import lambda from "../../assets/lambda-group-organizer.jpg";
-import portfolio from "../../assets/portfolio-1.png";
+import portfolio1 from "../../assets/portfolio-1.png";
+import portfolio2 from "../../assets/portfolio-2.png";
+import portfolio3 from "../../assets/portfolio-3.png";
+import portfolio4 from "../../assets/portfolio-4.png";
+import portfolio5 from "../../assets/portfolio-5.png";
+import portfolio6 from "../../assets/portfolio-mobile-1.png";
+import portfolio7 from "../../assets/portfolio-mobile-2.png";
+import portfolio8 from "../../assets/portfolio-mobile-3.png";
+import portfolio9 from "../../assets/portfolio-mobile-4.png";
+import portfolio10 from "../../assets/portfolio-mobile-5.png";
+import portfolio11 from "../../assets/portfolio-site-microsoft.png";
 
 export const sites = [
   {
     images: [
       {
-        src: pluaris,
-        alt: "Nowigence dashboard with a lot of data displayed",
+        src: portfolio1,
+        alt: "Portfolio website styled to look like an apple desktop computer",
       },
-    ],
-    title: "Nowigence",
-    shortDescription: `This was the first startup I worked for. I learned a great many lessons while working with nowigence. The technology we used at the company completely metamorphasized in the two years I worked there...`,
-    description: (
-      <>
-        <p>
-          This was the first startup I worked for. I learned a great many
-          lessons while working with nowigence. The technology we used at the
-          company completely metamorphasized in the two years I worked there.
-        </p>
-      </>
-    ),
-  },
-  {
-    images: [
       {
-        src: portfolio,
+        src: portfolio2,
+        alt: "Portfolio website styled to look like an apple desktop computer",
+      },
+      {
+        src: portfolio3,
+        alt: "Portfolio website styled to look like an apple desktop computer",
+      },
+      {
+        src: portfolio4,
+        alt: "Portfolio website styled to look like an apple desktop computer",
+      },
+      {
+        src: portfolio5,
+        alt: "Portfolio website styled to look like an apple desktop computer",
+      },
+      {
+        src: portfolio6,
+        alt: "Portfolio website styled to look like an apple desktop computer",
+      },
+      {
+        src: portfolio7,
+        alt: "Portfolio website styled to look like an apple desktop computer",
+      },
+      {
+        src: portfolio8,
+        alt: "Portfolio website styled to look like an apple desktop computer",
+      },
+      {
+        src: portfolio9,
+        alt: "Portfolio website styled to look like an apple desktop computer",
+      },
+      {
+        src: portfolio10,
+        alt: "Portfolio website styled to look like an apple desktop computer",
+      },
+      {
+        src: portfolio11,
         alt: "Portfolio website styled to look like an apple desktop computer",
       },
     ],
@@ -87,8 +120,35 @@ export const sites = [
   {
     images: [
       {
-        src: guild,
+        src: pluaris,
+        alt: "Nowigence dashboard with a lot of data displayed",
+      },
+    ],
+    title: "Nowigence",
+    shortDescription: `This was the first startup I worked for. I learned a great many lessons while working with nowigence. The technology we used at the company completely metamorphasized in the two years I worked there...`,
+    description: (
+      <>
+        <p>
+          This was the first startup I worked for. I learned a great many
+          lessons while working with nowigence. The technology we used at the
+          company completely metamorphasized in the two years I worked there.
+        </p>
+      </>
+    ),
+  },
+  {
+    images: [
+      {
+        src: guild1,
         alt: "Guild Education Home Page",
+      },
+      {
+        src: guild2,
+        alt: "Guild Education Home Page",
+      },
+      {
+        src: guild3,
+        alt: "Guild Education Home Page Mobile View",
       },
     ],
     title: "Guild Education",

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { sites } from "./sites";
-import { Card, CardHeader, CardBody, Image } from "grommet";
+import { Card, CardHeader, CardBody, Image, Box, Carousel } from "grommet";
 import styles from "./portfolio.module.css";
 import CloseBtn from "../../Components/closeBtn/CloseBtn";
 
@@ -11,16 +11,23 @@ export default function Portfolio() {
     <div className={styles.container}>
       {showSite !== -1 && (
         <div className={styles.fullSiteContainer}>
+          <h3>{sites[showSite].title}</h3>
           <CloseBtn
             close={() => setShowSite(-1)}
             extraStyles={styles.closeBtn}
           />
-          <image
-            src={sites[showSite].images[0].src}
-            alt={sites[showSite].images[0].alt}
-          />
-          <h3>{sites[showSite].title}</h3>
-
+          <div className={styles.carouselContainer}>
+            <Carousel fill>
+              {sites[showSite].images.map((siteImg) => (
+                <Image
+                  fit="contain"
+                  src={siteImg.src}
+                  alt={siteImg.alt}
+                  width={"100%"}
+                />
+              ))}
+            </Carousel>
+          </div>
           <p>{sites[showSite].description}</p>
         </div>
       )}

@@ -22,6 +22,7 @@
 
 .shortDesc {
   font-size: 1rem;
+  text-align: left;
 }
 
 .fullSiteContainer {
@@ -30,9 +31,17 @@
   padding: 40px;
 }
 
+.carouselContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  /* overflow: hidden; */
+}
+
 .closeBtn {
   position: absolute;
-  top: 40px;
+  top: 51px;
   right: 40px;
   z-index: 2;
 }
