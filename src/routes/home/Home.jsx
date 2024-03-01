@@ -9,13 +9,6 @@ import Guild from "../../assets/guild-1.png";
 export default function Home() {
   return (
     <div>
-      <div style={{ width: "100%", margin: "0 auto" }}>
-        <Carousel play={6000}>
-          <Image src={pluaris} width={"100%"} />
-          <Image src={portfolio1} width={"100%"} />
-          <Image src={Guild} width={"100%"} />
-        </Carousel>
-      </div>
       <p>Hello!</p>
       <p>Welcome to Whidbey Island Web Dev!</p>
       <p>
@@ -25,6 +18,13 @@ export default function Home() {
         <a href="https://jon-bernal.netlify.app/" className={styles.textLink}>
           portfolio website
         </a>
+        <div style={{ width: "100%", margin: "0 auto" }}>
+          <Carousel play={6000}>
+            <Image src={pluaris} width={"100%"} />
+            <Image src={portfolio1} width={"100%"} />
+            <Image src={Guild} width={"100%"} />
+          </Carousel>
+        </div>
       </p>
     </div>
   );
