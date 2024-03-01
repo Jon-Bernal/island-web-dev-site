@@ -1,21 +1,21 @@
 .container {
   max-width: 650px;
-  /* box-shadow: 2px 2px 4px #555; */
   border-radius: 6px;
-  border: 1px solid darkgray;
   padding: 20px;
   margin: 0 auto;
+  /* box-shadow: 2px 2px 4px #555; */
+  /* border: 1px solid darkgray; */
 }
 
 .pic {
-  height: 200px;
-  width: 200px;
-  background-color: var(--primary-color);
-  border-radius: 6%;
+  height: auto;
+  width: 50%;
+  /* float: left; */
+  /* background-color: var(--primary-color); */
+  /* border-radius: 6%; */
+  /* border: 6px solid white; */
   overflow: hidden;
-  border: 6px solid white;
-  float: left;
-  margin: 20px;
+  margin: 0 auto;
   @media (max-width: 650px) {
     height: 200px;
     width: 200px;
