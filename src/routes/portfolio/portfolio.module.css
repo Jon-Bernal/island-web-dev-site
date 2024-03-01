@@ -25,25 +25,14 @@
 }
 
 .fullSiteContainer {
-  position: fixed;
-  top: 80px;
-  left: 175px;
-  right: 0;
-  bottom: 0;
+  position: relative;
   background: var(--background-primary);
   padding: 40px;
 }
 
-.siteCloseBtn {
-  position: fixed;
-  top: 120px;
+.closeBtn {
+  position: absolute;
+  top: 40px;
   right: 40px;
   z-index: 2;
-  height: 40px;
-  width: 40px;
-  border: none;
-  cursor: pointer;
-  margin: 0;
-  padding: 0;
-  background: none;
 }
